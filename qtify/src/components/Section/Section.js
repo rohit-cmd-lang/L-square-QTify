@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "../Card/Card";
 import styles from "./section.module.css";
+import { CircularProgress } from "@mui/material";
 
 const Section = ({ title, data }) => {
   const [showAll, setShowAll] = useState(true);

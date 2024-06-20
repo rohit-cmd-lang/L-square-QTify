@@ -7,6 +7,7 @@ import axios from "axios";
 import styles from "./app.module.css";
 function App() {
   const [topAlbums, setTopAlbums] = useState([]);
+  const [newAlbums, setNewAlbums] = useState([]);
 
   const generateTopAlbums = async () => {
     let url = "https://qtify-backend-labs.crio.do/albums/top";
@@ -18,9 +19,20 @@ function App() {
       console.log(error);
     }
   };
+  const generateNewAlbums = async () => {
+    let url = "https://qtify-backend-labs.crio.do/albums/new";
+    try {
+      const response = await axios.get(url);
+      const albums = response.data;
+      setNewAlbums(albums);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     generateTopAlbums();
+    generateNewAlbums();
   }, []);
   return (
     <div>
@@ -28,6 +40,7 @@ function App() {
       <Hero />
       <div className={styles.sectionWrapper}>
         <Section title="Top Albums" data={topAlbums} />
+        <Section title="New Albums" data={newAlbums} />
       </div>
     </div>
   );
