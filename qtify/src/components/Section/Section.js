@@ -13,7 +13,7 @@ const Section = ({ title, data }) => {
       <div className={styles.header}>
         <h3>{title}</h3>
         <h4 className={styles.toggleText} onClick={handleCollapseToggle}>
-          {showAll ? "Collapse All" : "Show All"}
+          {showAll ? "Collapse" : "Show All"}
         </h4>
       </div>
       <div className={styles.cardWrapper}>
