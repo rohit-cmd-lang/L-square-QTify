@@ -5,6 +5,7 @@ import Section from "./components/Section/Section";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./app.module.css";
+import Carousel from "./components/Carousel/Carousel";
 function App() {
   const [topAlbums, setTopAlbums] = useState([]);
   const [newAlbums, setNewAlbums] = useState([]);
