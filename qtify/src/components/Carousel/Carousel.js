@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import "swiper/css";
+import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Swiper, useSwiper, SwiperSlide } from "swiper/react";
 import styles from "./Carousel.module.css";
 import CarouselLeft from "./CarouselLeft/CarouselLeft";
 import CarouselRight from "./CarouselRight/CarouselRight";
-import { SliderRoot } from "@mui/material";
 
 const Controls = ({ data }) => {
   let swiper = useSwiper();
