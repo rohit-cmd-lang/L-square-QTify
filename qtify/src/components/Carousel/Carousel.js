@@ -50,7 +50,7 @@ const Carousel = ({ data, renderCardComponent }) => {
         <CarouselLeft />
         <CarouselRight />
         {data.map((item) => (
-          <SwiperSlide>{renderCardComponent(item)}</SwiperSlide>
+          <SwiperSlide key={item.id}>{renderCardComponent(item)}</SwiperSlide>
         ))}
       </Swiper>
     </div>
